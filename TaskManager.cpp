@@ -36,6 +36,8 @@ void TaskManager::ProcessTasks() {
   for(int i = 0; i < MAX_TASKS; i++){
     if(task[i]){
       task[i]->Run();
+    }
+    else {
       return;
     }
   }

@@ -10,6 +10,7 @@ class Task {
     void Enable();
     void Disable();
     bool IsEnabled();
+    void SetInterval(unsigned int interval);
     virtual void Callback(void) = 0;
   private:
     bool TimePassed();
