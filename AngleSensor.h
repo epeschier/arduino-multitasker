@@ -3,19 +3,16 @@
 
 #include <Arduino.h>
 #include "Task.h"
+#include "Sensor.h"
 
-class AngleSensor: public Task {
+class AngleSensor: public Task, public Sensor<float> {
   public:
     AngleSensor(int pin, int voltage, unsigned int interval);
-    float GetValue();
-    bool ValueChanged();
    private:
-    void Init();
+   void Init();
     void Callback();
     int _voltage;
     int _inputPin;
-    float _degrees;
-    float _previousValue;
 };
 
 #endif
