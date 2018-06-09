@@ -24,6 +24,10 @@ bool Task::IsEnabled() {
   return _enabled;
 }
 
+void Task::SetInterval(unsigned int interval) {
+  _interval = interval;
+}
+
 bool Task::TimePassed() {
   unsigned long time = millis();
   return ((time - lastTime) >= _interval);

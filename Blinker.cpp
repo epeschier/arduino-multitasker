@@ -11,7 +11,6 @@ void Blinker::Init() {
 }
 
 void Blinker::Callback() {
-  Serial.println("Blink");
   digitalWrite(OutputPin, State);
   State = !State;
 }
