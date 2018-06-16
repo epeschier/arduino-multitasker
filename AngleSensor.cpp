@@ -5,6 +5,7 @@
 AngleSensor::AngleSensor(int pin, int voltage, unsigned int interval) : Task(interval) , Sensor() {
   _inputPin = pin;
   _voltage = voltage;
+  Init();
 }
 
 void AngleSensor::Init() {

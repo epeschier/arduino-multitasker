@@ -8,19 +8,12 @@ class Sensor {
     T GetValue();
     bool ValueChanged();
   protected:
-    virtual void Init() = 0;
     T _value;
     T _previousValue;
 };
 
 template <class T>
 Sensor<T>::Sensor() {
-  Init();
-}
-
-template <class T>
-void Sensor<T>::Init() {
-
 }
 
 template <class T>

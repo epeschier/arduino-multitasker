@@ -2,6 +2,7 @@
 
 Button::Button(int pin, unsigned int interval) : Task(interval), Sensor() {
   _inputPin = pin;
+  Init();
 }
 
 void Button::Init() {
